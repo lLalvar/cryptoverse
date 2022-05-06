@@ -1,38 +1,93 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Sansita+Swashed&display=swap');
+
+/* Box sizing rules */
+/* Remove default margin */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* Remove background color when clicking on mobile */
+@media (any-hover: none) {
+  * {
+    cursor: none !important;
   }
 }
 
-.App-header {
-  background-color: #282c34;
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  font-family: 'Roboto', sans-serif;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  line-height: 1.5;
 }
 
-.App-link {
-  color: #61dafb;
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+.App {
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  justify-items: center;
+  background-color: #f6f6f6;
+}
+
+.main {
+  width: 100%;
+}
+
+.container {
+  min-height: calc(100vh - 110px);
+  padding: 1rem;
+  margin: 0 auto;
+  max-width: 1440px;
+  width: 100%;
+  background-color: #f6f6f6;
+}
+
+@media (max-width: 1200px) {
+  .App {
+    grid-template-columns: 250px 1fr;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media (max-width: 900px) {
+  .App {
+    grid-template-columns: 1fr;
+  }
+
+  .container {
+    margin-top: 82px;
   }
 }

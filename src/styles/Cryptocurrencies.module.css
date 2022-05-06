@@ -1,0 +1,20 @@
+.input {
+  margin: 2rem auto;
+  display: block;
+  width: 250px;
+  padding: 0.25rem 0.5rem;
+  border: none;
+  outline: 2px solid #ccc;
+  border-radius: 0.25rem;
+}
+
+.input:focus {
+  outline: 2px solid dodgerblue;
+  border-radius: 0.25rem;
+}
+
+.input::placeholder {
+  color: #ccc;
+  font-weight: lighter;
+  font-size: 0.875rem;
+}

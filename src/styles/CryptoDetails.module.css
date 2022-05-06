@@ -1,0 +1,141 @@
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 110px);
+}
+
+.info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.statistic {
+  flex: 1 1 40%;
+}
+
+@media (max-width: 600px) {
+  .statistic {
+    flex: 1 1 90%;
+  }
+}
+
+.title {
+  text-align: center;
+  padding: 1rem;
+}
+
+.title h1 {
+  color: dodgerblue;
+  margin: 1rem;
+}
+
+.title p {
+  color: #333;
+}
+
+.chart {
+  border-top: 2px solid #ddd;
+  max-width: auto;
+  margin: 1rem 0;
+}
+
+.chartTitle {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.chartTitle h2 {
+  color: dodgerblue;
+}
+
+.chartTitle div {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+@media (max-width: 610px) {
+  .chartTitle {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 400px) {
+  .chartTitle {
+    flex-direction: column;
+  }
+
+  .chartTitle div {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+  }
+}
+
+.chart canvas {
+  width: 100% !important;
+}
+
+.chart select {
+  width: 150px;
+  padding: 0.25rem 0.5rem;
+  cursor: pointer;
+  margin: 1rem 0 0;
+}
+
+.chart option {
+  margin: 0.25rem 0.5rem;
+  cursor: pointer;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  border-bottom: 1px solid rgb(215, 215, 215);
+}
+
+.icon {
+  font-size: 1.25rem;
+  color: #555;
+}
+
+.item div:last-child {
+  flex: 1;
+  text-align: end;
+  font-weight: bold;
+}
+
+.statistic h2 {
+  color: dodgerblue;
+  margin-bottom: 1rem;
+}
+
+.desc {
+  margin: 1rem 0 2rem;
+  color: #333;
+}
+
+.statistic:nth-child(3) h3 {
+  margin: 1rem 0;
+}
+
+.statistic:nth-child(3) p {
+  color: #333;
+}
+
+.linksItem {
+  cursor: pointer;
+  transition: 250ms ease-in-out;
+}
+.linksItem:hover {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.linkName {
+  color: dodgerblue;
+}
